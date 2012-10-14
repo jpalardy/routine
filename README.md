@@ -4,14 +4,14 @@ ROUTINE
 
 A series of exercises when learning a new programming language.
 
-The challenge is not the logic of the exercise, that's supposed to be trivial. The challenge is the transposition of these ideas to a new language:
+The challenge is not the logic of the exercises, that's supposed to be trivial. The challenge is the transposition of these ideas to a new language:
  - how to write a function?
  - how to get the command-line arguments?
  - how to call a function recursively?
  - how to iterate over the letters of a string?
  - how to handle unicode?
- - how, if it's even possible, do you handle optional function arguments?
- - and so on.
+ - how, if it's even possible, to handle optional function arguments?
+ - and so on...
 
 
 MOTIVATION
