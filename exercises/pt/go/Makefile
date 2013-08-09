@@ -1,11 +1,13 @@
 
+GOPATH := $(GOPATH):$(shell pwd)
+
 all: run
 
 run: install
 	@bin/pt
 
 install:
-	@go install pt
+	@GOPATH=$(GOPATH) go install pt
 
 clean:
 	rm -rf bin/ pkg/
