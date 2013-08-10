@@ -1,20 +1,16 @@
 
-SRC = $(wildcard *.go)
-DST = $(SRC:.go=)
+GOPATH := $(GOPATH):$(shell pwd)
 
-%: %.go
-	go build $<
+all: run
 
-#-------------------------------------------------
+run: install
+	@bin/no_repeating_digits
 
-all: $(DST)
-
-run: $(DST)
-	time -p (./no_repeat | wc -l)
-	time -p (./no_repeat_count)
+install:
+	@GOPATH=$(GOPATH) go install no_repeating_digits
 
 clean:
-	rm -rf $(DST)
+	rm -rf bin/ pkg/
 
-.PHONY: all run clean
+.PHONY: all run install clean
 
