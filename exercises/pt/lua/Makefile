@@ -4,5 +4,7 @@ all: run
 run:
 	@lua pt.lua
 
-.PHONY: all run
+clean:
+
+.PHONY: all run clean
 
