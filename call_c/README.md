@@ -7,6 +7,5 @@ and print the return value.
 concepts:
 - compiling C
 - integrating C
-- static linking?
-- dynamic linking?
+- static and/or dynamic linking
 
