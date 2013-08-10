@@ -1,20 +1,14 @@
 
-SRC = $(wildcard *.coffee)
-DST = $(SRC:.coffee=.js)
+all: run
 
-%.js: %.coffee
-	coffee -c $<
+run: compile
+	@node bin/no_repeating_digits.js
 
-#-------------------------------------------------
-
-all: $(DST)
-
-run: $(DST)
-	time -p (node no_repeat.js | wc -l)
-	time -p (node no_repeat_count.js)
+compile:
+	@coffee -c -o bin/ src/no_repeating_digits.coffee
 
 clean:
-	rm -rf $(DST)
+	rm -rf bin/
 
-.PHONY: all run clean
+.PHONY: all run compile clean
 
