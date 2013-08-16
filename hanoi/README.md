@@ -1,11 +1,13 @@
 
 Given a number of disk, print the steps to move the [tower](http://en.wikipedia.org/wiki/Tower_of_hanoi) from peg to peg.
 
-1. Print solution using format: 2 -> 3. One step per line.
-2. Count above, no printing.
-3. Use "time" to calculate runtime.
+The solution for n disks takes 2^n - 1 steps. I use this, unfairly or not, to benchmark implementations
+in different languages. It starts taking "real" time around 23 disks.
 
-Notes:
-- The solution for n rings takes 2^n - 1 steps.
-- Take number of disks from command-line, default to 3.
+concepts:
+- parsing the command-line
+- string -> int
+- basic console printing
+- recursion
+- function pointers
 
