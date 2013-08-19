@@ -20,10 +20,10 @@ func main() {
 }
 
 func getTasks(dc *dateCond) []string {
-	result := make([]string, 0, 256) // HARDCODED
+	result := make([]string, 0, 10) // 10 would be more than enough...
 	add := func(str string, cond bool) {
 		if cond {
-			result = append(result, str)
+			result = append(result, str) // append grows the slice automatically
 		}
 	}
 	add("memora", true)
