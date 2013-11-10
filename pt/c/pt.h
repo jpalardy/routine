@@ -5,10 +5,10 @@ typedef struct {
   bool sunday;
 } dateCond;
 
-typedef void (*ctask)(char*, int);
+typedef void (*ctask)(char*, bool);
 
 static void printHeader(struct tm* tm_day);
-static void printTask(char* task, int cond);
+static void printTask(char* task, bool cond);
 static void generateTasks(dateCond dc, ctask);
 static dateCond dateCondFor(struct tm* tm_day);
 
